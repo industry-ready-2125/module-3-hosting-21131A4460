@@ -3,265 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>services page</title>
-    
+    <title>Big Basket - Billing</title>
     <style>
-        /* CSS Reset */
-*{
-    margin: 0;
-    padding: 0;
-}
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://www.cleaninginstitute.org/sites/default/files/styles/featured_image/public/pictures/cleaning-tips/groceries.jpg?itok=05ZaQncW');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: rgb(30, 32, 30);
+            
+        }
 
-html{
-    scroll-behavior: smooth;
-}
+        header, main, footer {
+            padding: 20px;
+            border-radius: 10px;
+            margin-left: 500px;
+            
+        }
 
-/* CSS Variables */
-:root{
-    --navbar-height: 59px;
-}
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
 
-/* Navigation Bar */
-#navbar{
-    display: flex;
-    align-items: center;
-    position: sticky;
-    top: 0px;
-}
+        header nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
 
-#navbar::before{
-    content: "";
-    background-color: black;
-    position: absolute;
-    top:0px;
-    left:0px;
-    height: 100%;
-    width:100%;
-    z-index: -1;
-    opacity: 0.7;
-}
+        main {
+            text-align: center;
+        }
 
-/* Navigation Bar: Logo and Image */
-#logo{
-    margin: 10px 34px;
-}
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
 
-#logo img{
-    height: 59px;
-    margin: 3px 6px;
-}
+        label, input, textarea, button {
+            display: block;
+            margin-bottom: 10px;
+        }
 
-
-/* Navigation Bar: List Styling */
-
-#navbar ul{
-    display: flex;
-    font-family: 'Baloo Bhai', cursive;
-}
-
-#navbar ul li{ 
-    list-style: none;
-    font-size: 1.3rem;
-}
-
-#navbar ul li a{
-    color: white;
-    display: block;
-    padding: 3px 22px;
-    border-radius: 20px;
-    text-decoration: none;
-}
-
-#navbar ul li a:hover{
-    color: black;
-    background-color: white;
-}
-
-/* Home Section */
-#home{
-    display: flex;
-    flex-direction: column;
-    padding:3px 200px;
-    height: 550px;
-    justify-content: center;
-    align-items: center;
-}
-
-#home::before{ 
-    content: "";
-    position: absolute;
-    background: url('https://assets.cntraveller.in/photos/60ba224df27d46df614fc7a6/master/pass/World-Food-Programme-1366x768.jpg') no-repeat center center/cover;
-    height: 642px;
-    top:0px;
-    left:0px;
-    width: 100%;
-    z-index: -1;
-    opacity:0.89;
-}
-
-#home h1{
-    color:white;
-    text-align: center;
-    font-family: 'Bree Serif', serif;
-}
-
-#home p{
-    color:white;
-    text-align: center;
-    font-size: 1.5rem;
-    font-family: 'Bree Serif', serif;
-}
-/* Services Section */
-#services{
-    margin: 34px;
-    display: flex;
-}
-#services .box{ 
-    border: 2px solid brown;
-    padding: 34px;
-    margin: 2px 55px;
-    border-radius: 28px;
-    background: #f2f2f2;
-    margin-bottom: 20px;
-}
-
-#services .box img{ 
-   height: 50px;
-   margin: auto;
-   display: block;
-}
-
-#services .box p{
-    font-family: 'Bree Serif', serif;
-
-} 
-
-/* Clients Section */
-#client-section{ 
-    position: relative;
-}
-
-#client-section::before{
- content: "";
- position: absolute;
- background: url('https://media.istockphoto.com/id/511745686/photo/flying-salad-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=6WtKjuF09rON3xqS5b8x_MQoFEGCaS2no8fFGgo7Llk=');
- width: 100%;
- height: 100%;
- z-index: -1;
- opacity: 0.3;
-}
-
-#clients{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.client-item{
-    padding: 34px;
-}
-
-#clients img{
-    height: 124px;
-}
-
-
-/* Contact Section */
-#contact{
-    position: relative;
-}
-#contact::before{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 0.7;
-    background: url('https://spacexglobalcorp.com/wp-content/uploads/2023/07/contact-banner-2.jpeg') no-repeat center center/cover;
-
-}
-#contact-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 34px;
-}
-#contact-box input, 
-#contact-box textarea{
-    width: 100%;
-    padding: 0.5rem;
-    border-radius: 9px;
-    font-size: 1.1rem;
-} 
-
-#contact-box form{
-    width: 40%;
-}
-
-#contact-box label{
-   font-size: 1.3rem;
-   font-family: 'Bree Serif', serif;
-
-}
-
-
-footer{
-    background: black;
-    color: white;
-    padding: 9px 20px;
-}
-
-/* Utility Classes */
-.h-primary{
-    font-family: 'Bree Serif', serif;
-    font-size: 3.8rem;
-    padding: 12px;
-}
-
-.h-secondary{
-    font-family: 'Bree Serif', serif;
-    font-size: 2.3rem;
-    padding: 12px;
-}
-
-.btn{
-    padding: 6px 20px;
-    border: 2px solid white;
-    background-color: brown;
-    color: white;
-    margin: 17px;
-    font-size: 1.5rem;
-    border-radius: 10px;
-    cursor:pointer;
-}
-
-.center{
-    text-align: center;
-}
-
+        button {
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
-    <section id="services-container">
-        <h1 class="h-primary center">Our Services</h1>
-        <div id="services">
-            <div class="box">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfX-fZLQZYVidNxYCjTbLnEfCEDkScDNG9Yw&usqp=CAU" alt="">
-                <h2 class="h-secondary center">Food Catering</h2>
-                <p class="center">Indulge in culinary excellence with our premium catering service, perfect for any occasion. Our expert chefs craft dishes using fresh ingredients, ensuring an unforgettable taste. Choose from a diverse menu including appetizers, main courses, and desserts to satisfy every palate. Enjoy convenience by ordering through our app, with prompt delivery and impeccable presentation guaranteed. Elevate your event with our exquisite catering options and create unforgettable memories with ease.
-                </p>
-            </div>
-            <div class="box">
-                <img src="https://delibitecatering.com/wp-content/uploads/2019/07/lunch-box-in-flight-494x330-396x330.jpg"alt="">
-                <h2 class="h-secondary center">Bulk Ordering</h2>
-                <p class="center">Simplify catering for large events with our food delivery app's bulk ordering feature. Whether it's a corporate meeting or family reunion, choose from a diverse menu of dishes to suit all tastes. Customize your order directly in the app, and our dedicated team ensures timely delivery, leaving you free to enjoy the occasion. Impress your guests with delicious food straight to your doorstep.</p>
-            </div>
-            <div class="box">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROpqfqNFi-z_mvVXev0fW0AJfSOHZ62-uZzA&usqp=CAU" alt="">
-                <h2 class="h-secondary center">Food Ordering</h2>
-                <p class="center">Experience the convenience of food delivery with our user-friendly app. Browse a diverse range of cuisines, from comforting classics to exotic specialties, and place your order with just a few taps. Sit back and relax while our reliable delivery partners ensure your food arrives fresh and hot at your doorstep. Whether it's lunch, dinner, or a late-night snack, we've got you covered. Download the app now to embark on a culinary adventure from the comfort of your own home.</p>
-            </div>
-        </div>
-    </section> 
+    <header>
+        <h1>Big Basket - Billing</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="page02.html">Items</a></li>
+                <li><a href="page03.html">Billing</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Billing Details</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" required></textarea><br><br>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Big Basket. All rights reserved.</p>
+    </footer>
 </body>
 </html>
